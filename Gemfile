@@ -1,5 +1,4 @@
-source 'https://rubygems.org'
-# source 'https://ruby.taobao.org'
+source 'https://gems.ruby-china.com/'
 
 git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?('/')
@@ -44,10 +43,13 @@ gem 'will_paginate'
 
 gem 'rake', '12.0.0'
 
+gem 'figaro', '1.1.1'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
   gem 'rspec-rails'
+  gem "rspec_junit_formatter"
   # Use sqlite3 as the database for Active Record
   # gem 'sqlite3'
   gem 'mysql2', '0.4.8'
@@ -74,3 +76,7 @@ gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 #sidekiq
 # gem 'sidekiq'
 # gem 'sinatra', require: nil
+
+
+# gem 'config', Easiest way to add multi-environment yaml settings
+# gem 'figaro' simple Rails app configuration
