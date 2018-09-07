@@ -76,3 +76,7 @@ gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 #sidekiq
 # gem 'sidekiq'
 # gem 'sinatra', require: nil
+
+
+# gem 'config', Easiest way to add multi-environment yaml settings
+# gem 'figaro' simple Rails app configuration
