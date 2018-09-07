@@ -66,7 +66,7 @@ Rails.application.configure do
       port:               587,
       domain:             'example.com',
       user_name:          'longxing386@gmail.com',
-      password:           '',
+      password:           ENaV[:mail_password],
       authentication:     'plain',
       enable_starttls_auto: true
   }
