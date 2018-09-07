@@ -79,4 +79,4 @@ gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
 
 # gem 'config', Easiest way to add multi-environment yaml settings
-# gem 'figaro' simple Rails app configuration
+gem 'figaro', '1.1.1'  # simple Rails app configuration
