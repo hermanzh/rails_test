@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Untitled Document</title>
+</head>
+
+<script>
+  function createRoundName() {
+    var firstName = document.getElementById('firstname').value;
+    var lastName = document.getElementById('lastnames').value;
+    var sex = document.getElementById('sex').value == '男' ? 'babyBoy' : 'babyGirl';
+    if(firstName == null || firstName.length == 0){
+      firstName = '张';
+    }
+    var names = null;
+    var name = '';
+    if(lastName == null || lastName.length == 0) {
+//			alert('您没有输入喜欢的字，使用系统默认字');
+      names = getDefaultCharacter(sex);
+    }else {
+      names = lastName.split('、');
+    }
+
+    name += names[getRandomNo(0,names.length-1)];
+    name += names[getRandomNo(0,names.length-1)];
+
+    createResultElement(firstName + name);
+
+  }
+
+  function getRandomNo(low,high) {
+    var interval = high - low + 1;
+    return Math.floor(Math.random()*interval + low);
+  }u
+
+  function createResultElement(name) {
+    var p = document.createElement('p');
+    var node = document.createTextNode(name);
+    p.appendChild(node);
+    var parent = document.getElementById('form');
+    parent.appendChild(p);
+  }
+
+  function getDefaultCharacter(sex) {
+    return {babyBoy: '甫.子.仁.义.忠.信.礼.智.睿.儒.俊.力.勇.圣.宏.恒.天.骏'.split('.'),
+      babyGirl: '媛.姝.姬.婷.淑.娴.慧.仪.贞.巧.绣.黛.钗.钏.香.倩.素.青.翠.惠.喜.怡.雅.静.瑛.珊.琼.璟.玥.瑄.月.雪.雯.云.湄.春.燕'.split('.')
+    }[sex]
+  }
+
+  function giveHintInput(sex) {
+    return getDefaultCharacter(sex).round(5).join('、');
+  }
+
+</script>
+
+<body>
+宝宝起名工具
+<form action="check.asp" id='form' name="checkform"
+      target="_blank">
+  <p>姓<input type="text" id="firstname" placeholder="默认姓张"></p>
+  <p>喜欢的字<input type="text" id="lastnames" style='width: 500px' placeholder='输入喜欢的字，用、隔开'></p>
+  <p>性别
+    <select id="sex">
+      <option>男</option>
+      <option>女</option>
+    </select>
+  </p>
+  <p><input type="reset" name="Reset"  value="重填">
+    <input type="button" value="提交" onClick="createRoundName()"></p>
+</form>
+
+</body>
+
+
+
+</html>

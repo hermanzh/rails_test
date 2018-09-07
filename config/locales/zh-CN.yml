@@ -1,0 +1,38 @@
+zh-CN:
+  devise:
+    registrations:
+      user:
+        signed_up: 注册
+        invalid: 非法
+    sessions:
+      user:
+        signed_in: 登陆成功
+        signed_out: 登出成功
+    failure:
+      user:
+      unauthenticated: 未登录
+      not_found_in_database: 数据库中未找到该记录
+  welcome:
+    hello: 晚安，好梦！
+  group:
+    join_success: 加入本讨论版成功！
+    joined: 你已经是本讨论版成员！
+    quited: 已退出本讨论版！
+    not_joined: 你不是本讨论版成员，怎么退出
+    no_permission: 没有权限！！！
+  post:
+    modify_success: 修改成功！
+    delete_success: 删除成功！
+  errors:
+      messages:
+        already_confirmed: 确认成功，请登陆
+        not_found: 不存在
+        not_saved:
+          one: 1个错误阻止 %{resource} 保存
+  activerecord:
+    attributes:
+      user:
+        sexes:
+          male: 男
+          female: 女
+
