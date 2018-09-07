@@ -43,16 +43,19 @@ gem 'will_paginate'
 
 gem 'rake', '12.0.0'
 
-gem 'figaro', '1.1.1'
+gem 'figaro', '1.1.1' # simple Rails app configuration
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
   gem 'rspec-rails'
-  gem "rspec_junit_formatter"
+  gem 'rspec_junit_formatter'
   # Use sqlite3 as the database for Active Record
   # gem 'sqlite3'
   gem 'mysql2', '0.4.8'
+
+  gem 'overcommit', require: false
+  gem 'rubocop', '~> 0.58.2', require: false
 end
 
 group :development do
@@ -73,10 +76,8 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
-#sidekiq
+# sidekiq
 # gem 'sidekiq'
 # gem 'sinatra', require: nil
 
-
 # gem 'config', Easiest way to add multi-environment yaml settings
-gem 'figaro', '1.1.1'  # simple Rails app configuration
