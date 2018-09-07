@@ -54,9 +54,8 @@ jobs:
             mkdir -p /tmp/test-results
             TEST_FILES="$(circleci tests glob "spec/**/*_spec.rb" | circleci tests split)"
             bundle exec rspec --format documentation \
-                              --format RspecJunitFormatter \
                               --out /tmp/test-results/rspec.xml \
-                              -- $(echo ${TEST_FILES} | sed -e 's/\n/\\n/' -e 's/ /\ /')
+                              -- $(echo "${TEST_FILES}" | sed -e 's/\n/\\n/' -e 's/ /\ /')
 
       # collect reports
       - store_test_results:
