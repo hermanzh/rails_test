@@ -32,7 +32,12 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 group :development do
   gem "capistrano", "~> 3.10", require: false
-  gem 'capistrano-rails', group: :development
+  gem 'capistrano-rbenv', '2.1.1'
+  gem 'capistrano-bundler', '1.2.0'
+  gem 'capistrano-rails', '1.3.0'
+  gem 'capistrano3-puma', '3.1.1'
+  gem 'capistrano-rails-db', '0.0.2'
+  gem 'capistrano-sidekiq', '0.10.0'
 end
 
 gem 'swagger-docs', '0.2.9'
