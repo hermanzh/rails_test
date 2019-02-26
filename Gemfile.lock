@@ -228,7 +228,6 @@ GEM
       rainbow (>= 2.2.2, < 4.0)
       ruby-progressbar (~> 1.7)
       unicode-display_width (~> 1.0, >= 1.0.1)
-    ruby-prof (0.17.0)
     ruby-progressbar (1.10.0)
     sass (3.4.24)
     sass-rails (5.0.6)
@@ -324,7 +323,6 @@ DEPENDENCIES
   rspec-rails
   rspec_junit_formatter
   rubocop (~> 0.58.2)
-  ruby-prof
   sass-rails (~> 5.0)
   simple_form
   spring
