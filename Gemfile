@@ -30,7 +30,10 @@ gem 'jbuilder', '~> 2.5'
 # gem 'bcrypt', '~> 3.1.7'
 
 # Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
+group :development do
+  gem "capistrano", "~> 3.10", require: false
+  gem 'capistrano-rails', group: :development
+end
 
 gem 'swagger-docs', '0.2.9'
 
@@ -73,7 +76,7 @@ group :development do
 end
 
 group :production do
-  gem 'pg'
+  # gem 'pg'
   # gem 'mysql2', '0.4.8'
 end
 
