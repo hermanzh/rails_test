@@ -40,7 +40,7 @@ group :development do
   gem 'capistrano-sidekiq', '0.10.0'
 end
 
-gem 'swagger-docs', '0.2.9'
+# gem 'swagger-docs', '0.2.9'
 
 gem 'active_model_serializers', '0.10.5'
 
